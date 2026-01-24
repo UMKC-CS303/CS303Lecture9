@@ -113,35 +113,37 @@ public class MyDblLinkedList<E extends Comparable<? super E>>implements MyList<E
   //      decrement size
   //      return saved element 
   public E removeLast() {
-    System.out.println("\nTASK 1: WRITE THE CODE FOR REMOVE LAST");    
-    return null;
+    if (size == 0) 
+      return null;
+    
+    else if (size == 1) {
+      E temp = tail.element;
+      head = tail = null;
+      size = 0;
+      return temp;
+    }
+    else {
+        //in a doubly linked list, we can start at the tail.
+        E temp = tail.element;
+        tail = tail.prev;
+        tail.next = null;
+        size --;
+        return temp;
+
+    }
   }
 
   
+  //TASK 1: REMOVE FIRST
   // Remove the head node and return the object
   //PRE:  None 
   //POST: Check if list is empty (return null if so)
   //      save head element, remove head value & adjust pointers
   //      return saved element 
   public E removeFirst() {
-    //left as an exercise
-    //return null;
-    if (size == 0) {
-      return null;
-    }
-    else if (size == 1) {
-      E temp = head.element;
-      head = tail = null;
-      size = 0;
-      return temp;
-    }
-    else {
-      E temp = head.element;
-      head = head.next;
-      head.prev = null;
-      size--;
-      return temp;
-    }
+    System.out.println("\nTASK 1: WRITE THE CODE FOR REMOVE FIRST");    
+    return null;
+
   }
 //TASK 2: ADD BEFORE
 //PRE:  accepts 2 elements

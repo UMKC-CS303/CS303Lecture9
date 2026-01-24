@@ -20,21 +20,29 @@ public class Functions {
  
         MyDblLinkedList<String> names = new MyDblLinkedList<>();
 
-        System.out.print("   USING MYDBLLINKEDLIST ADD:"); 
+        System.out.print("   TESTOMG MYDBLLINKEDLIST ADD:"); 
         names.add("Tom");
         names.add("John");
         names.add("Harry");
-        names.add("Sam");
+        names.add("Sal");
+         names.add("Sam");
         System.out.println(names);
 
-        System.out.println("   USING MYDBLLINKEDLIST ADDBEFORE:");         
+        //TASK 1: REMOVEFIRST
+        names.removeFirst();
+        System.out.println("    After removing first:        " + names);   
+
+        //TASK 2: ADDBEFORE
+        System.out.println("   TESTING MYDBLLINKEDLIST ADDBEFORE:"); 
+        names.addBefore("Tom", "John");
+        System.out.println("    After adding Tom before John: " + names);          
         names.addBefore("Sam", "Bob");
         System.out.println("    After adding Bob before Sam: " + names);   
         names.addBefore("Tom", "Al");
         System.out.println("    After adding Al before Tom:  " + names);   
 
-        //TASK 2: DELETEBEFORE
-        System.out.println("   \nUSING MYDBLLINKEDLIST DELETEBEFORE:");       
+        //TASK 3: DELETEBEFORE
+        System.out.println("   \nTESTING MYDBLLINKEDLIST DELETEBEFORE:");       
         names.deleteBefore("Bob");
         System.out.println("    After deleting before Bob:   " + names);  
         names.deleteBefore("Carl");
