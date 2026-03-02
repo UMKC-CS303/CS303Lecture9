@@ -347,7 +347,12 @@ public class MyDblLinkedList<E extends Comparable<? super E>>implements MyList<E
     return size;
   }
 
-  //PRE: used
+  //PRE: accepts an elemenet to add in ordered
+  //     assumes all items added previously were added in order
+  //POST: if list is empty - add the element first
+  //      advances a reference to the first element >= to element to add
+  //      if 'past' tail - add element to the end
+  //      if not, add before the current element
   public void addOrdered(E e){
     if (isEmpty()) {
         addFirst(e);
