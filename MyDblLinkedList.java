@@ -145,12 +145,14 @@ public class MyDblLinkedList<E extends Comparable<? super E>>implements MyList<E
     return null;
 
   }
-//TASK 2: ADD BEFORE
-//PRE:  accepts 2 elements
-//POST: inserts the new element as follows:
-//         if the list is empty, add it to the front
-//         if item 'prior' is not found, add to the end of the list 
-//         else add new node prior to the location of insertion
+
+  
+  //TASK 2: ADD BEFORE
+  //PRE:  accepts 2 elements
+  //POST: inserts the new element as follows:
+  //         if the list is empty, add it to the front
+  //         if item 'prior' is not found, add to the end of the list 
+  //         else add new node prior to the location of insertion
 
   public void addBefore(E prior, E data) {
 
@@ -269,6 +271,9 @@ public class MyDblLinkedList<E extends Comparable<? super E>>implements MyList<E
 
   @Override /** Return the index of the head matching element in 
    *  this list. Return -1 if no match. */
+  //PRE:  accepts an object to find in the list
+  //POST: if found, returns the first index where item was found
+  //      if not, return -1
   public int indexOf(Object e) {
     // Left as an exercise in lecture 8 (same code)
     int position = 0;
@@ -328,6 +333,8 @@ public class MyDblLinkedList<E extends Comparable<? super E>>implements MyList<E
   }
 
   //TASK 4: Complete the code to determine if a list is circular
+  //PRE:  none
+  //POST: returns true if the list is circular, false if not
   public boolean isCircular() {
     System.out.println("\nTASK 4: WRITE THE CODE FOR ISCIRCULAR");    
     return false;
