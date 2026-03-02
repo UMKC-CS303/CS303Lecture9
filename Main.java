@@ -12,7 +12,7 @@ public class Main {
         //COMPLETE TEST OF MYDBLLINKEDLIST
         //   INCLUDES: CONTAINS, GET, INDEXOF
         //             LASTINDEXOF SET
-        Functions.testMyList();
+        Functions.example2();
         
 
         System.out.println("\n\nCREATING ORDERED LIST WITH PERSON OBJECTS\n");

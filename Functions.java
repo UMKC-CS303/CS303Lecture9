@@ -16,7 +16,7 @@ public class Functions {
     }   
  
     public static void example1(){
-        System.out.println("\nEXAMPLE 1: TESTING ADD & ADDBEFORE"); 
+        System.out.println("\nEXAMPLE 1: TESTING ADD & ADDBEFORE & DELETEBEFORE"); 
  
         MyDblLinkedList<String> names = new MyDblLinkedList<>();
 
@@ -53,8 +53,8 @@ public class Functions {
     }
 
 
-    public static void testMyList(){
-        System.out.println("\nTESTING MYLINKEDLIST"); 
+    public static void example2(){
+        System.out.println("\nTESTING MYLINKEDLIST FUNCTIONALITY"); 
 
         // Create a list for strings
         //MyLinkedList<String> list = new MyLinkedList<String>();
