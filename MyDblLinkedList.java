@@ -47,13 +47,17 @@ public class MyDblLinkedList<E extends Comparable<? super E>>implements MyList<E
   //     increases the size of the list
   public void addFirst(E e) {
     Node<E> newNode = new Node<>(e); // Create a new node
-    newNode.next = head;             // link the new node with the head
-                                     // prev is already null
-    head = newNode;                  // head points to the new node
+    if (head == null){
+      head = newNode;
+      tail = newNode;
+    }
+    else{
+      newNode.next = head;           // link the new node with the head
+      head.prev = newNode;              
+      head = newNode;                // head points to the new node
+    }
     size++;                          // Increase list size    
 
-    if (tail == null)
-      tail = head;                  // the new node is the only node in list
   }
 
   //Add an element to the end of the list
